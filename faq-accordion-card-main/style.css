@@ -1,0 +1,154 @@
+.root {
+    --clr-veryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+    --color-softRed: hsl(14, 88%, 65%);
+    /* background-gradient */
+    --color-softViolet: hsl(273, 75%, 66%);
+    --color-softBlue: hsl(240, 73%, 65%);
+    /* text */
+    --color-veryDarkGreyishBlue: hsl(237, 12%, 33%);
+    --color-darkPlayishBlue: hsl(240, 6%, 50%);
+    /* dividers */
+    --color-lightGraishBlue: hsl(240, 5%, 91%);
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%) 100%);
+    display: grid;
+    place-items: center;
+}
+
+hr {
+    background-color: hsl(240, 5%, 64%);
+    border-width: .015rem;
+    margin: 1rem;
+    margin-left: 0%;
+    width: 20rem;
+}
+
+.container {
+
+    background-color: white;
+    border-radius: 2%;
+    padding: 3rem;
+    margin: 3rem;
+    display: flex;
+    height: fit-content;
+    width: 105vh;
+    /* overflow: hidden; */
+}
+
+/* Arranging the left side illustration */
+.illustration {
+    position: relative;
+}
+
+.women {
+    transform: translateX(-8rem);
+}
+
+.box {
+    position: absolute;
+    top: 8rem;
+    left: -10rem;
+}
+
+.shadow {
+    position: absolute;
+    bottom: -10.875rem;
+    right: 8.125rem;
+    transform: scale(0.5) translate(50%,20%);
+}
+
+/* right side  */
+.content {
+    /* width: 50%; */
+    /* padding-right: 10rem; */
+}
+
+.faq {
+    padding: .2rem 1rem;
+    padding-left: 0%;
+}
+
+.question {
+    display: inline-block;
+}
+
+.question:hover {
+    color: hsl(14, 88%, 65%);
+    ;
+    cursor: pointer;
+    text-align: left;
+}
+
+.arrow {
+    cursor: pointer;
+}
+
+.text {
+    padding: 0;
+}
+
+/* footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+/* styles using js  */
+.hide {
+    display: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.imgarrow {
+    transform: rotate(180deg);
+}
+
+
+/* mobile design  */
+
+@media (max-width: 980px) {
+
+    /* illustration place krni hai abhi taaki relative rhe */
+
+    /* Arranging the left side illustration */
+    .illustration {
+        position: absolute;
+        width: 50%;
+        margin: 5rem;
+        transform: scale(0.5) translate(25%,-160%);
+    }
+    .shadow {
+        transform: scale(0.55)translate(60%,20%);
+    }
+
+
+    /* body */
+    h1{
+        text-align: center;
+    }
+    .container{
+        width: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4%;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5rem;
+    }
+
+}
