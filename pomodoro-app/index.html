@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/7699680487.js" crossorigin="anonymous"></script>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/webD-practice_projects/styles/styles.css">
+    <title>pomodoro-app</title>
+</head>
+
+<body>
+
+    <h1>pomodoro</h1>
+
+    <div class="container">
+        <ul>
+            <li class="pomodoro-mode-btn">pomodoro</li>
+            <li class="short-break-mode-btn">short break</li>
+            <li class="long-break-mode-btn">long break</li>
+        </ul>
+    </div>
+
+    <!-- clock -->
+    <div class="clock">
+        <span class="clock-timer"></span>
+        <div class="inner-circle">
+            <h3 class="time-left">25:00</h3>
+            <button class="pause-btn">PLAY</button>
+        </div>
+
+        <!-- svg-timer -->
+        <!-- <svg class="timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="timer__circle">
+                <circle class="timer__path-elapsed" id="indicator" cx="50" cy="50" r="45"></circle>
+                <path id="timer_path" stroke-dasharray="283" class="timer__path" d="
+                M 50, 50
+                m -45, 0
+                a 45,45 0 1,0 90,0
+                a 45,45 0 1,0 -90,0
+              "></path>
+            </g> 
+        </svg> -->
+    </div>
+
+    <!-- settings-btn -->
+    <button class="settings-btn">
+        <!-- <i class="fa-solid fa-gear fa-lg"></i> -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-settings">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path
+                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+            </path>
+        </svg>
+    </button>
+
+    <!-- settings-panel -->
+    <div class="settings-container">
+
+        <h1>Settings</h1>
+        <span class="cross-btn"><i class="fa-solid fa-circle-xmark fa-2xl"></i></span>
+        <hr>
+
+        <h3>TIME (MINUTES)</h3>
+        <div class="time-container">
+            <div class="pomodoro-mode">
+                <h5>pomodoro</h5>
+                <input type="number" class="pomodoro-time" value="25" min="0">
+            </div>
+            <div class="shortBreak-mode">
+                <h5>short break</h5>
+                <input type="number" class="short-break-time" value="5" min="0">
+            </div>
+            <div class="longBreak-mode">
+                <h5>long break</h5>
+                <input type="number" class="long-break-time" value="15" min="0">
+            </div>
+        </div>
+        <hr>
+
+        <h3>FONT</h3>
+        <div class="font-container mode-options">
+            <div class="font-1 font-mode circle">Aa</div>
+            <div class="font-2 font-mode circle">Aa</div>
+            <div class="font-3 font-mode circle">Aa</div>
+        </div>
+        <hr>
+
+        <h3>COLOR</h3>
+        <div class="color-container mode-options">
+            <div class="color-1 color-mode circle"></div>
+            <div class="color-2 color-mode circle"></div>
+            <div class="color-3 color-mode circle"><i class="fa-solid fa-check tick"></i></div>
+        </div>
+
+        <button class="apply-btn">Apply</button>
+    </div>
+
+    <!-- javascript -->
+    <script src="/webD-practice_projects/index.js"></script>
+</body>
+
+</html>
