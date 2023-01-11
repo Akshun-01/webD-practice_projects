@@ -5,4 +5,4 @@
 - [Pomodoro App](https://akshun-01.github.io/webD-practice_projects/pomodoro-app/)
 - [IP Address Tracker](https://akshun-01.github.io/webD-practice_projects/ip-address-tracker-master/)
 - [Advice Generator](https://akshun-01.github.io/webD-practice_projects/advice-generator-app-main/)
-- [FAQ Card](faq-accordion-card-main/)
+- [FAQ Card](https://akshun-01.github.io/webD-practice_projects/faq-accordion-card-main/)
