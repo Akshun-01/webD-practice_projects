@@ -1,0 +1,49 @@
+.card-skeleton{
+--cardColor: hsl(209, 23%, 22%);
+--fontColor: hsl(0, 0%, 100%);
+--shadowColor: hsl(197, 15%, 18%);
+
+ margin: 2rem 1rem;
+ background-color: var(--cardColor);
+ width: 300px;
+ border-radius: .4rem;
+ color: var(--fontColor);
+ box-shadow: 0 0 .8rem .5rem var(--shadowColor);
+ cursor: pointer;
+ display: grid;
+}
+.card-skeleton:hover{
+    scale: 1.1;
+    transition: ease-in .2s;
+}
+.card-skeleton.active{
+    --cardColor : hsl(0deg 0% 98%);
+    --fontColor : hsl(200deg 15% 8%);
+    --shadowColor: hsl(0deg 0% 80%);
+}
+.country-flag{
+    width: 300px;
+    height: 250px;
+    border-radius: .4rem .4rem 0 0;
+}
+.inner-container{
+    padding: 1rem;
+}
+.data{
+    color: var(--VeryLightGray );
+}
+.country-name{
+    
+}
+.country-data{
+    padding-top: 1rem;
+}
+.population{
+
+}
+.region{
+
+}
+.capital{
+
+}

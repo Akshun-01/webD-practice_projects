@@ -1,0 +1,109 @@
+:root{
+--DarkBlue : hsl(209, 23%, 22%); /* (Dark Mode Elements) */
+--VeryDarkBlue : hsl(207, 26%, 17%); /* (Dark Mode Background) */
+--VeryVeryDarkBlue : hsl(200, 15%, 8%); /* (Light Mode Text) */
+--DarkGray : hsl(0, 0%, 52%); /* (Light Mode Input) */
+--VeryLightGray : hsl(0, 2%, 70%); 
+--VeryVeryLightGray : hsl(0, 0%, 98%); /* (Light Mode Background) */
+--White : hsl(0, 0%, 100%); /* (Dark Mode Text & Light Mode Elements) */
+
+/* custom variables */
+--cardColor: hsl(209, 23%, 22%);
+--fontColor: white;
+--shadowColor: hsl(197, 15%, 18%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--VeryDarkBlue);
+    font-family: 'Nunito Sans', sans-serif;
+    height: 100vh;
+}
+
+.main-container{
+    margin: 3.5rem;
+    position: relative;
+}
+/* searchbar */
+input[type="text"]{
+    background-color: var(--DarkBlue);
+    color: #fff;
+    border: none;
+    width: 20rem;
+    height: 2.75rem;
+    border-radius: .3rem;
+    padding: .5rem;
+    padding-left: 3.5rem;
+    box-shadow: 5px 5px 10px 1px rgba(0,0,0, 0.1);
+}
+input[type="text"].active{
+    background-color: var(--White);
+    color: #000;
+}
+input::placeholder{
+    color: rgb(255,255,255, 0.5); 
+    font-weight: 200;
+}
+input.active::placeholder{
+    color: rgba(83, 80, 80, 0.5);
+}
+.searchbar::before{
+    content:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-search'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+    position: absolute;
+    transform: translate(50%,50%);
+    padding-left: .5rem;
+}
+.searchbar.active::before{
+    content:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='grey' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-search'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+}
+/* filter */
+#filter{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10rem;
+    height: 2.8rem;
+    border: none;
+    border-radius: .3rem;
+    padding: 0 1rem;
+    background-color: var(--DarkBlue);
+    color: rgb(255,255,255, 0.5);
+    box-shadow: 2px 2px 10px 1px rgba(0,0,0, 0.1);
+}
+#filter.active{
+    background-color: var(--White);
+    color: rgba(36, 33, 33, 0.5);
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+@media(max-width: 620px){
+    .searchbar{
+        translate: -10%;
+    }
+    .searchbar::before{
+        transform: translate(10%,40%);
+        padding-left: .5rem;
+    }
+    input[type="text"]{
+        width: 11.5rem;
+        padding-left: 2.25rem;
+    }
+
+    #filter{
+        width: 5rem; 
+        padding: 0 .5rem;  
+        translate: 20%;
+    }
+}

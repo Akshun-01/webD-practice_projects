@@ -1,0 +1,51 @@
+.navbar{
+    color: white;
+    background-color: var(--DarkBlue);
+    padding: 1rem 3rem;
+    box-shadow: 0 -1rem 2rem .1rem black;
+}
+.navbar.active{
+    background-color: var(--VeryVeryLightGray);
+    color: var(--VeryVeryDarkBlue);
+    transition: 0.5s;
+}
+h1{
+    font-size: 1.5rem;
+}
+.dark-mode{
+    font-size: 1.15rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    cursor: pointer;
+}
+.dark-mode:before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24' fill='white' stroke='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'%3E%3C/path%3E%3C/svg%3E");
+    position: absolute;
+    transform: translateX(-140%);
+}
+.dark-mode.active::before{
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='hsl(200, 15%, 8%)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'%3E%3C/path%3E%3C/svg%3E");
+    transition: 0.5s;
+}
+
+@media (max-width: 620px) {
+    h1{
+        font-size: 1rem;
+        translate: -10%;
+    }
+
+    .dark-mode{
+        font-size: .75rem;
+        top: 1.25rem;
+    }
+    .dark-mode:before {
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 24 24' fill='white' stroke='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'%3E%3C/path%3E%3C/svg%3E");
+        position: absolute;
+        transform: translateX(-140%);
+    }
+    .dark-mode.active::before{
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 24 24' fill='none' stroke='hsl(200, 15%, 8%)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'%3E%3C/path%3E%3C/svg%3E");
+        transition: 0.5s;
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,800;1,600&display=swap"
+        rel="stylesheet">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/card.css">
+    <link rel="stylesheet" href="./styles/cardInfo.css">
+    <title>Globe.info</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Where in the world ?</h1>
+        <p class="dark-mode">Dark Mode</p>
+    </nav>
+
+    <div class="main-container">
+
+        <!-- searchMenu -->
+        <div class="search-menu">
+
+            <div class="searchbar">
+                <input type="text" class="searched-text" placeholder="Search for a country...">
+            </div>
+            <!-- filter -->
+            <select id="filter">
+                <option value="All">All</option>
+                <option value="Asia">Asia</option>
+                <option value="Africa">Africa</option>
+                <option value="Europe">Europe</option>
+                <option value="Americas">Americas</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+
+        </div>
+
+        <!-- cards -->
+        <div class="card-container">
+            <!-- card dynamic -->
+        </div>
+             
+    </div>
+
+    <div class="card-info-container" style="display: none;">
+        <!-- <button class="back-btn"><span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></span> 
+                Back
+        </button>
+        <div class="card-info-inner-container">
+            <div class="card-info-image"><img src="https://flagcdn.com/w320/gt.png" alt=""></div>
+            <div class="card-info-details">
+                <h1 class="info-coutry-name">Argentina</h1>
+                <div class="left info-country-data">
+                    <p class="data-tag">Native Name: <span class="info-data"></span> </p>
+                    <p class="data-tag">Population: <span class="info-data"></span> </p>
+                    <p class="data-tag">Region: <span class="info-data"></span> </p>
+                    <p class="data-tag">Sub Region: <span class="info-data"></span> </p>
+                    <p class="data-tag">Capital: <span class="info-data"></span> </p>
+                </div>
+                <div class="right info-country-data">
+                    <p class="data-tag">Top level domain: <span class="info-data"></span> </p>
+                    <p class="data-tag">Currencies: <span class="info-data"></span> </p>
+                    <p class="data-tag">Languages: <span class="info-data"></span> </p>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
